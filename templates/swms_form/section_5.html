@@ -1,0 +1,98 @@
+{# This section contains #}
+{% load static %}
+{% load extra_filters %}
+<div class="row">
+    <div class="col-md-12 bg-blue text-center text-white rounded p-1">
+        <h2>SWMS Sign Off</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 p-3">
+        <p>
+            This SWMS developed in consultation and cooperation with workers and relevant organisation
+            representatives. I have read the above SWMS, and I understand its contents. I confirm that I
+            have
+            the skills and training, including relevant certification, to conduct the task as described.
+            I agree to comply with safety requirements within this SWMS, including risk control measures,
+            safe
+            work instructions and PPE described.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col" colspan="3" class="text-center text-white bg-blue table-licence-top">
+                        Licences, Competencies & Qualifications
+                    </th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+                <tr>
+                    <th scope="col" rowspan="2" class="text-center">Worker's Name</th>
+                    <th scope="col" rowspan="2" class="text-center">Job Role/Position</th>
+                    <th scope="col" class="text-center text-white bg-blue">Type/Description</th>
+                    <th scope="col" class="text-center text-white bg-blue">Class</th>
+                    <th scope="col" class="text-center text-white bg-blue">Number</th>
+                    <th scope="col" rowspan="2" class="text-center">Signature</th>
+                    <th scope="col" rowspan="2" class="text-center">Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{ swm_form.so_workersname_1 }}</td>
+                    <td>{{ swm_form.so_jobrole_1 }}</td>
+                    <td>{{ swm_form.so_qualification_type_1 }}</td>
+                    <td>{{ swm_form.so_qualification_class_1 }}</td>
+                    <td>{{ swm_form.so_qualification_number_1 }}</td>
+                    <td>{{ swm_form.so_signature_1 }}</td>
+                    <td>{{ swm_form.so_signature_date_1 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ swm_form.so_workersname_2 }}</td>
+                    <td>{{ swm_form.so_jobrole_2 }}</td>
+                    <td>{{ swm_form.so_qualification_type_2 }}</td>
+                    <td>{{ swm_form.so_qualification_class_2 }}</td>
+                    <td>{{ swm_form.so_qualification_number_2 }}</td>
+                    <td>{{ swm_form.so_signature_2 }}</td>
+                    <td>{{ swm_form.so_signature_date_2 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ swm_form.so_workersname_3 }}</td>
+                    <td>{{ swm_form.so_jobrole_3 }}</td>
+                    <td>{{ swm_form.so_qualification_type_3 }}</td>
+                    <td>{{ swm_form.so_qualification_class_3 }}</td>
+                    <td>{{ swm_form.so_qualification_number_3 }}</td>
+                    <td>{{ swm_form.so_signature_3 }}</td>
+                    <td>{{ swm_form.so_signature_date_3 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ swm_form.so_workersname_4 }}</td>
+                    <td>{{ swm_form.so_jobrole_4 }}</td>
+                    <td>{{ swm_form.so_qualification_type_4 }}</td>
+                    <td>{{ swm_form.so_qualification_class_4 }}</td>
+                    <td>{{ swm_form.so_qualification_number_4 }}</td>
+                    <td>{{ swm_form.so_signature_4 }}</td>
+                    <td>{{ swm_form.so_signature_date_4 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ swm_form.so_workersname_5 }}</td>
+                    <td>{{ swm_form.so_jobrole_5 }}</td>
+                    <td>{{ swm_form.so_qualification_type_5 }}</td>
+                    <td>{{ swm_form.so_qualification_class_5 }}</td>
+                    <td>{{ swm_form.so_qualification_number_5 }}</td>
+                    <td>{{ swm_form.so_signature_5 }}</td>
+                    <td>{{ swm_form.so_signature_date_5 }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

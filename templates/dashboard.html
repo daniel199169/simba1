@@ -1,0 +1,46 @@
+    {%  extends 'main.html' %}
+
+{% block content %}
+
+<br>
+
+<div class="row">
+	<div class="col-md-2">
+		<h5>QUICKLINKS</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="create_swms/">Create SWMS</a>
+		</div>
+	</div>
+	<div class="col-md-10">
+		<h5>SWMS</h5>
+		<hr>
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>SWMS ID</th>
+					<th>Site Number</th>
+					<th>Job Type</th>
+					<th>Job Number</th>
+                    <th>Update</th>
+                    <th>Print</th>
+					<th>Delete</th>
+				</tr>
+		        {% for swm in swms  %}
+                    <tr>
+                        <td>{{ swm.id }}</td>
+                        <td>{{ swm.site_number }}</td>
+                        <td>{{ swm.job_type }}</td>
+                        <td>{{ swm.job_number }}</td>
+                        <td><a class="btn btn-sm btn-info" href="{% url 'update_swms' swm.id %}">Update</a></td>
+                        <td><a class="btn btn-sm btn-success" href="{% url 'print_swms' swm.id %}">Print</a></td>
+                        <td><a class="btn btn-sm btn-danger" href="{% url 'delete_swms' swm.id %}">Delete</a></td>
+                    </tr>
+                {%  endfor %}
+			</table>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}

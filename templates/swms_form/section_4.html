@@ -1,0 +1,107 @@
+{# This section contains #}
+{% load static %}
+{% load extra_filters %}
+<div class="row">
+    <div class="col-md-2">
+        <div class="bg-blue text-center text-white rounded p-1">
+            <h3>Permits</h3>
+        </div>
+        <ul class="ks-cboxtags">
+            <li>{{ swm_form.permits_na }} <label for="{{ swm_form.permits_na.id_for_label }}">Not Applicable</label>
+            </li>
+            <li>{{ swm_form.permits_confinedspace }} <label for="{{ swm_form.permits_confinedspace.id_for_label }}">Confined
+                Space</label></li>
+            <li>{{ swm_form.permits_hotwork }} <label for="{{ swm_form.permits_hotwork.id_for_label }}">Hot
+                Work</label>
+            </li>
+            <li>{{ swm_form.permits_localcouncil }} <label for="{{ swm_form.permits_localcouncil.id_for_label }}">Local
+                Council</label></li>
+        </ul>
+    </div>
+    <div class="col-md-5">
+        <div class="bg-blue text-center text-white rounded p-1">
+            <h3>Plant and Equipment</h3>
+        </div>
+        <ul class="ks-cboxtags">
+            <li>{{ swm_form.pe_electrical_tools }} <label for="{{ swm_form.pe_electrical_tools.id_for_label }}">Electrical
+                tools & leads - Tested &
+                tagged quarterly</label>
+            </li>
+            <li>{{ swm_form.pe_handtools }} <label for="{{ swm_form.pe_handtools.id_for_label }}">Hand Tools - Meet
+                AS/NZS - Regular visual
+                inspection</label>
+            </li>
+            <li>{{ swm_form.pe_ladders }} <label for="{{ swm_form.pe_ladders.id_for_label }}">Ladders - Meet AS/NZS
+                -
+                Inspected, tagged out
+                if damaged</label>
+            </li>
+            <li>{{ swm_form.pe_mobile_plant }} <label for="{{ swm_form.pe_mobile_plant.id_for_label }}">Mobile Plant
+                -
+                specify - Inspected, tagged
+                out if damaged</label>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bg-blue text-center text-white rounded p-1">
+                    <h3>Supervisory Arrangements</h3>
+                </div>
+                <ul class="ks-cboxtags">
+                    <li>{{ swm_form.sa_audits }} <label for="{{ swm_form.sa_audits.id_for_label }}">Audits</label>
+                    </li>
+                    <li>{{ swm_form.sa_spotchecks }} <label for="{{ swm_form.sa_spotchecks.id_for_label }}">Spot
+                        Checks</label></li>
+                    <li>{{ swm_form.sa_reportingsystems }} <label
+                            for="{{ swm_form.sa_reportingsystems.id_for_label }}">Reporting
+                        Systems</label></li>
+                    <li>{{ swm_form.sa_supervisors }} <label for="{{ swm_form.sa_supervisors.id_for_label }}">Suitably
+                        qualified supervisors for
+                        job</label>
+                    </li>
+                    <li>{{ swm_form.sa_onsitesupervision }} <label
+                            for="{{ swm_form.sa_onsitesupervision.id_for_label }}">Direct on-site
+                        supervision</label></li>
+                    <li>{{ swm_form.sa_remotesitecomms }} <label
+                            for="{{ swm_form.sa_remotesitecomms.id_for_label }}">Remote
+                        site: communication
+                        systems/schedule</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="bg-blue text-center text-white rounded p-1">
+            <h3>Hazardous on-site substances with MSDS on-site</h3>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">{{ swm_form.hazardous_substances_1 }}</li>
+            <li class="list-group-item">{{ swm_form.hazardous_substances_2 }}</li>
+            <li class="list-group-item">{{ swm_form.hazardous_substances_3 }}</li>
+            <li class="list-group-item">{{ swm_form.hazardous_substances_4 }}</li>
+            <li class="list-group-item">{{ swm_form.hazardous_substances_5 }}</li>
+            <li class="list-group-item">{{ swm_form.hazardous_substances_6 }}</li>
+            <li class="list-group-item">{{ swm_form.hazardous_substances_7 }}</li>
+            <li class="list-group-item">{{ swm_form.hazardous_substances_8 }}</li>
+            <li class="list-group-item">{{ swm_form.hazardous_substances_9 }}</li>
+            <li class="list-group-item">{{ swm_form.hazardous_substances_10 }}</li>
+            <li class="list-group-item">{{ swm_form.hazardous_substances_11 }}</li>
+            <li class="list-group-item">{{ swm_form.hazardous_substances_12 }}</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <div class="bg-blue text-center text-white rounded p-1">
+            <h3>Site Management Plan</h3>
+        </div>
+        <ul class="ks-cboxtags">
+            <li>{{ swm_form.smp_isconstructionproject }} <label
+                    for="{{ swm_form.smp_isconstructionproject.id_for_label }}">This work is associated with a
+                Construction Project</label></li>
+        </ul>
+    </div>
+</div>

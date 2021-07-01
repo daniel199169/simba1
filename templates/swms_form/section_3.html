@@ -1,0 +1,72 @@
+{# This section contains #}
+{% load static %}
+{% load extra_filters %}
+{% for group in swms_groups %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive text-center">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col" colspan="6" class="bg-blue text-white text-center">
+                            <h2>{{ group.name }}</h2></th>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="text-center">Task Name</th>
+                        <th scope="col" class="text-center">Hazard</th>
+                        <th scope="col" class="text-center">Risk</th>
+                        <th scope="col" class="text-center">Control Measure</th>
+                        <th scope="col" class="text-center">Risk</th>
+                        <th scope="col" class="text-center">Responsible Person</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for job_task in group.job_task.all %}
+                        <tr>
+                            <td>
+                                {{ job_task.name }}
+                            </td>
+                            <td>
+                                <ul>
+                                    {% if ';' in job_task.hazards %}
+                                        {% with job_task.hazards|split:';' as hazards %}
+                                            {% for hazard in hazards %}
+                                                <li>{{ hazard }}</li>
+                                            {% endfor %}
+                                        {% endwith %}
+                                    {% else %}
+                                        <li>{{ job_task.hazards }}</li>
+                                    {% endif %}
+                                </ul>
+                            </td>
+                            <td>
+                                {{ job_task.hazard_risk }}
+                            </td>
+                            <td>
+                                <ul>
+                                    {% if ';' in job_task.control_measures %}
+                                        {% with job_task.control_measures|split:';' as measures %}
+                                            {% for measure in measures %}
+                                                <li>{{ measure }}</li>
+                                            {% endfor %}
+                                        {% endwith %}
+                                    {% else %}
+                                        <li>{{ job_task.control_measures }}</li>
+                                    {% endif %}
+                                </ul>
+                            </td>
+                            <td>
+                                {{ job_task.control_risk }}
+                            </td>
+                            <td>
+                                {{ job_task.responsible_person }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endfor %}

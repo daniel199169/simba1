@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% block content %}
+    {% load extra_filters %}
+    {% load static %}
+    <div class="container bg-light">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% include 'swms_form/section_header.html' %}
+            {% include 'swms_form/section_1.html' %}
+            {% include 'swms_form/section_2.html' %}
+            {% include 'swms_form/section_3.html' %}
+            {% include 'swms_form/section_4.html' %}
+            {% include 'swms_form/section_5.html' %}
+            {% include 'swms_form/section_footer.html' %}
+        </form>
+    </div>
+{% endblock %}

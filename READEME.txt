@@ -1,0 +1,69 @@
+Safe Work Method Statement (SWMS) Dynamic Web Form.
+
+This is a web form that will be used by onsite technicians to record the different work safety requirements
+specific to that job site. The web app should be optimized for use on iPads.
+
+Users should be able to create, update, delete and print (to pdf) each SWMS form.
+
+Each action is explained below.
+
+Create.
+
+    1. User selects "Create SWMS" button on the dashboard (or homepage)
+    2. User selects which SWMS Groups are present onsite and to be included in SWMS form.
+        a. Each SWMS Group is associated with a series of specific job tasks
+    3. The base SWMS Form is loaded, with the SWMS Groups and associated job tasks from Step 2.
+    4. After filling out all required fields, user saves form which is saved to the server, and emailed to office
+        a. Email address will specified on the form
+        b. Form must have validation and all errors reported
+        c. All job tasks must saved to another model that is specific only to this SWMS form and not update the default
+        job tasks.
+
+Update
+    1. User select the SWMS Form to be updated from the dashboard.
+    2. All fields should be editable.
+
+Delete
+    1. Users selects to delete SWMS form from the dashboard, that form and its associated Job Tasks are deleted.
+
+Print
+    1. User selects the Print button from dashboard, that SWMS is printed to PDF on the server and emailed.
+    2. PDF should be styled like example word document in project folder (SWMS-example.doc)
+
+
+TODO
+
+Dashboard (homepage)
+    1. Update/Print/Delete Button functions need to be completed.
+    2. Search functionality needs to be enabled to search on 'Site Number', 'SWMS ID', 'Job Type + Job Number'
+    3. Search bar could be added to a nav bar at top of form
+
+Form: section_header.html
+    1. Business contact information should be placed in bottom-right.
+
+Form: section_1.html
+    1. EFS Contact Signature field -- needs to be a touchscreen signature field optimized for iPad
+
+Form: section_2.html
+    1. None
+
+Form: section_3.html
+    1. Each job task should be editable (on update) and attached specifically to this SWMS Form.
+
+Form: section_4.html
+    1. Hazardous on-site substances needs to have a button to add more fields
+        a. Currently set to 3 fields, could be 10-20
+
+Form: section_5.html
+    1. Sign off needs to have button to add more rows
+        a. Currently set to 5 fields, could be 10-20
+
+Form: section_footer.html
+    1. Fields that need to be created/added
+        a. Document Number e.g. 'SWMS' + SWMS.id
+        b. Issue Date - Date that SWMS was first created
+        c. Revision Date - Date that last time SWMS was updated
+        d. Revision Number - Version number, which increases each time SWMS Form is updated.
+
+
+

@@ -1,0 +1,33 @@
+{% extends "main.html" %}
+{% load extra_filters %}
+{% load static %}
+{% block content %}
+    <form action="{% url 'create_swms' %}" method="POST">
+        {% csrf_token %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title text-center">Select All required SWMS</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="ks-cboxtags">
+                                {% for group in swms_groups %}
+                                    <li>
+                                        <input name="swmsgroup_ids" value="{{ group.id }}" type="checkbox"
+                                               id="switch_{{ group.name|slugify }}">
+                                        <label for="switch_{{ group.name|slugify }}">{{ group.name }}</label>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="card-footer text-muted text-center">
+                            <input type="Submit" name="Submit" value="Submit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

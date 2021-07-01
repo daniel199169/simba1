@@ -1,0 +1,288 @@
+{# This section contains #}
+{% load static %}
+{% load extra_filters %}
+<div class="row">
+    <div class="col-md-12 bg-blue text-center text-white rounded p-3">
+        <h1>Safe Work Method Statement (Form 220)</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Office Use Only
+            </div>
+            <div class="form-floating p-1">
+                {{ swm_form.efs_name }}
+                <label for="efs_name">EFS Contact</label>
+            </div>
+            <div class="form-floating p-1">
+                {{ swm_form.efs_phone_number }}
+                <label for="efs_phone_number">EFS Phone Number</label>
+            </div>
+            <div class="form-floating p-1">
+                {{ swm_form.efs_signature }}
+                <label for="efs_signature">EFS Contact Signature</label>
+            </div>
+            <div class="form-floating p-1">
+                {{ swm_form.date_created }}
+                <label for="date_created">Date</label>
+            </div>
+            <div class="form-floating p-1">
+                {{ swm_form.efs_manager_name }}
+                <label for="date_created">EFS Manager</label>
+            </div>
+            <div class="form-floating p-1">
+                {{ swm_form.efs_manager_email }}
+                <label for="date_created">EFS Manager Email</label>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Site Details
+            </div>
+            <div class="form-floating p-1">
+                {{ swm_form.site_name }}
+                <label for="site_name">Site Name</label>
+            </div>
+            <div class="form-floating p-1">
+                {{ swm_form.site_number }}
+                <label for="site_number">Site Number</label>
+            </div>
+            <div class="form-floating p-1">
+                {{ swm_form.job_type }}
+                <label for="job_type">Job Type</label>
+            </div>
+            <div class="form-floating p-1">
+                {{ swm_form.job_number }}
+                <label for="job_number">Job Number</label>
+            </div>
+            <div class="form-floating p-1">
+                {{ swm_form.site_contact }}
+                <label for="site_contact">Site Contact</label>
+            </div>
+            <div class="form-floating p-1">
+                {{ swm_form.site_email }}
+                <label for="site_email">Site Contact Email</label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row p-2">
+    <div class="col-md-12 bg-blue text-center text-white rounded p-3">
+        <h2>This Work Activity Involves The Following Hazardous Work and Environmental Impacts</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <div>
+            <ul class="ks-cboxtags">
+                <li>{{ swm_form.electrical_equipment }} <label
+                        for="{{ swm_form.electrical_equipment.id_for_label }}">Electrical
+                    equipment</label></li>
+                <li>{{ swm_form.hot_work }} <label for="{{ swm_form.hot_work.id_for_label }}">Hot Work</label></li>
+                <li>{{ swm_form.noise_vibration }} <label for="{{ swm_form.noise_vibration.id_for_label }}">Noise &
+                    vibration</label></li>
+                <li>{{ swm_form.fuels_oils_chemicals }} <label
+                        for="{{ swm_form.fuels_oils_chemicals.id_for_label }}">Fuels,
+                    oils & chemicals</label></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="p-1">
+            <ul class="ks-cboxtags">
+                <li>{{ swm_form.elevated_levels }} <label for="{{ swm_form.elevated_levels.id_for_label }}">Elevated
+                    levels</label></li>
+                <li>{{ swm_form.hazardous_manual_tasks }} <label
+                        for="{{ swm_form.hazardous_manual_tasks.id_for_label }}">Hazardous manual tasks</label>
+                </li>
+                <li>{{ swm_form.native_vegetation_weeds }} <label
+                        for="{{ swm_form.native_vegetation_weeds.id_for_label }}">Native vegetation &
+                    weeds</label>
+                </li>
+                <li>{{ swm_form.terrestrial_fauna }} <label for="{{ swm_form.terrestrial_fauna.id_for_label }}">Terrestrial
+                    fauna</label></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="p-1">
+            <ul class="ks-cboxtags">
+                <li>{{ swm_form.slips_trips_falls }} <label for="{{ swm_form.slips_trips_falls.id_for_label }}">Slips,
+                    trips & falls</label></li>
+                <li>{{ swm_form.outdoor_work }} <label for="{{ swm_form.outdoor_work.id_for_label }}">Outdoor
+                    work</label></li>
+                <li>{{ swm_form.air_quality }} <label for="{{ swm_form.air_quality.id_for_label }}">Air
+                    quality</label>
+                </li>
+                <li>{{ swm_form.waterways_soils }} <label for="{{ swm_form.waterways_soils.id_for_label }}">Waterways
+                    &
+                    soils</label></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="p-1">
+            <ul class="ks-cboxtags">
+                <li>{{ swm_form.hazardous_substances }} <label
+                        for="{{ swm_form.hazardous_substances.id_for_label }}">Hazardous
+                    substances</label></li>
+                <li>{{ swm_form.waste }} <label for="{{ swm_form.waste.id_for_label }}">Waste</label></li>
+                <li>{{ swm_form.cultural_heritage }} <label for="{{ swm_form.cultural_heritage.id_for_label }}">Cultural
+                    heritage</label></li>
+                <li>{{ swm_form.vehicle_movement }} <label for="{{ swm_form.vehicle_movement.id_for_label }}">Vehicle
+                    movement</label></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row gx-5">
+    <div class="col-md-12 bg-blue text-center text-white rounded p-3">
+        <h2>This Work Activity Involves the following "High-Risk Construction Work"</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="p-1">
+            <ul class="ks-cboxtags">
+                <li>{{ swm_form.confined_spaces }} <label for="{{ swm_form.confined_spaces.id_for_label }}">Confined
+                    spaces</label></li>
+                <li>{{ swm_form.using_explosives }} <label for="{{ swm_form.using_explosives.id_for_label }}">Using
+                    explosives</label></li>
+                <li>{{ swm_form.mobile_plant_movement }} <label
+                        for="{{ swm_form.mobile_plant_movement.id_for_label }}">Mobile
+                    plant movement</label></li>
+                <li>{{ swm_form.diving_work }} <label for="{{ swm_form.diving_work.id_for_label }}">Diving
+                    work</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="p-1">
+            <ul class="ks-cboxtags">
+                <li>{{ swm_form.asbestos_disturbance }} <label
+                        for="{{ swm_form.asbestos_disturbance.id_for_label }}">Asbestos
+                    disturbance</label></li>
+                <li>{{ swm_form.tilt_up_pre_cast_concrete }} <label
+                        for="{{ swm_form.tilt_up_pre_cast_concrete.id_for_label }}">Tilt-up or pre-cast
+                    concrete</label>
+                </li>
+                <li>{{ swm_form.demolition_load_bearing }} <label
+                        for="{{ swm_form.demolition_load_bearing.id_for_label }}">Demolition of a load-bearing
+                    structure</label>
+                </li>
+                <li>{{ swm_form.artificial_extremes }} <label for="{{ swm_form.artificial_extremes.id_for_label }}">Artificial
+                    extremes of temperature</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="p-1">
+            <ul class="ks-cboxtags">
+                <li>{{ swm_form.pressurised_gas }} <label for="{{ swm_form.pressurised_gas.id_for_label }}">Pressurised
+                    gas distribution mains or
+                    piping chemical, fuel or refrigerant lines energised electrical installations or
+                    services</label>
+                </li>
+                <li>{{ swm_form.structure_or_buildings }} <label
+                        for="{{ swm_form.structure_or_buildings.id_for_label }}">Structures or buildings
+                    involving
+                    structural alterations or repairs that require temporary support to prevent
+                    collapse</label>
+                </li>
+                <li>{{ swm_form.falling_risk_2m }} <label for="{{ swm_form.falling_risk_2m.id_for_label }}">Involves
+                    a
+                    risk of a person falling from
+                    2m or more, including work on telecommunications towers</label>
+                </li>
+                <li>{{ swm_form.working_at_depth }} <label for="{{ swm_form.working_at_depth.id_for_label }}">Working
+                    at
+                    depths greater than 1.5
+                    Metres, including tunnels or mines</label>
+                </li>
+                <li>{{ swm_form.work_adjacent_road }} <label for="{{ swm_form.work_adjacent_road.id_for_label }}">Work
+                    carried out adjacent to a road,
+                    railway or shipping lane, traffic corridor</label>
+                </li>
+                <li>{{ swm_form.work_contaminated }} <label for="{{ swm_form.work_contaminated.id_for_label }}">Work
+                    in
+                    an area that may have a
+                    contaminated or flammable atmosphere</label>
+                </li>
+                <li>{{ swm_form.in_or_near_water }} <label for="{{ swm_form.in_or_near_water.id_for_label }}">In or
+                    near
+                    water or other liquid that
+                    involves the risk of drowning</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-1 text-center">
+        <span>Foot Protection</span>
+        <img src="{% static 'images/ppe_1.png' %}" class="responsive"><br/>
+        {{ swm_form.ppe_1_checkbox }}
+    </div>
+    <div class="col-md-1 text-center">
+        <span>Hearing Protection</span>
+        <img src="{% static 'images/ppe_2.png' %}" class="responsive"><br/>
+        {{ swm_form.ppe_2_checkbox }}
+    </div>
+    <div class="col-md-1 text-center">
+        <span>High Visibility</span>
+        <img src="{% static 'images/ppe_3.png' %}" class="responsive"><br/>
+        {{ swm_form.ppe_3_checkbox }}
+    </div>
+    <div class="col-md-1 text-center">
+        <span>Head Protection</span>
+        <img src="{% static 'images/ppe_4.png' %}" class="responsive"><br/>
+        {{ swm_form.ppe_4_checkbox }}
+    </div>
+    <div class="col-md-1 text-center">
+        <span>Eye Protection</span>
+        <img src="{% static 'images/ppe_5.png' %}" class="responsive"><br/>
+        {{ swm_form.ppe_5_checkbox }}
+    </div>
+    <div class="col-md-1 text-center">
+        <span>Face Protection</span>
+        <img src="{% static 'images/ppe_6.png' %}" class="responsive"><br/>
+        {{ swm_form.ppe_6_checkbox }}
+    </div>
+    <div class="col-md-1 text-center">
+        <span>Hand Protection</span>
+        <img src="{% static 'images/ppe_7.png' %}" class="responsive"><br/>
+        {{ swm_form.ppe_7_checkbox }}
+    </div>
+    <div class="col-md-1 text-center">
+        <span>Protective Clothing</span>
+        <img src="{% static 'images/ppe_8.png' %}" class="responsive"><br/>
+        {{ swm_form.ppe_8_checkbox }}
+    </div>
+    <div class="col-md-1 text-center">
+        <span>Breathing Protection</span>
+        <img src="{% static 'images/ppe_9.png' %}" class="responsive"><br/>
+        {{ swm_form.ppe_9_checkbox }}
+    </div>
+    <div class="col-md-1 text-center">
+        <span>Sun Protection</span>
+        <img src="{% static 'images/ppe_10.png' %}" class="responsive"><br/>
+        {{ swm_form.ppe_10_checkbox }}
+    </div>
+    <div class="col-md-1 text-center">
+        <span>Safety Harness</span>
+        <img src="{% static 'images/ppe_11.png' %}" class="responsive"><br/>
+        {{ swm_form.ppe_11_checkbox }}
+    </div>
+    <div class="col-md-1 text-center">
+        <span>No rings, watches, jewellery, long and loose hair tied back</span><br/>
+        {{ swm_form.ppe_12_checkbox }}
+    </div>
+</div>
